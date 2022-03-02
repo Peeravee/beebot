@@ -36,23 +36,25 @@ exports.LineBotReply = functions.https.onRequest(async (req, res) => {
       headers: LINE_HEADER_AUDIO,
       encoding: null,
     });
-    const filename = `${req.body.events[0].timestamp}.m4a`;
+
+    let timestamp = req.body.events[0].timestamp
+    const filename = `${timestamp}.m4a`;
     let tempLocalFile = path.join("./temp", filename);
     await fs.writeFileSync(tempLocalFile, contentBuffer);
-    const filenamewav = `${req.body.events[0].timestamp}.wav`;
+    const filenamewav = `${timestamp}.wav`;
     let tempLocalFileWav = path.join("./temp", filenamewav);
     const resp = await fs.readFileSync(tempLocalFile);
     audioContext.decodeAudioData(resp, async (buffer) => {
       const wav = toWav(buffer);
       await fs.writeFileSync(tempLocalFileWav, new Buffer(wav));
-      await waveDraw(`./temp/${req.body.events[0].timestamp}.wav`, `${req.body.events[0].timestamp}`);
+      await waveDraw(`./temp/${timestamp}.wav`, `${timestamp}`);
     });
 
     const db = admin.database();
     await db.ref("/prediction/All").transaction((current_val) => {
       return (current_val || 0) + 1;
     });
-    await clearTemp(filenamewav,filename,`wave${req.body.events[0].timestamp}.png`)
+    await clearTemp(filenamewav,filename,`wave${timestamp}.png`)
     return res.status(200).end();
   }
 
