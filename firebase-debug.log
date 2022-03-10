@@ -1,0 +1,79 @@
+[debug] [2022-03-10T14:22:31.609Z] ----------------------------------------------------------------------
+[debug] [2022-03-10T14:22:31.612Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2022-03-10T14:22:31.612Z] CLI Version:   10.2.2
+[debug] [2022-03-10T14:22:31.612Z] Platform:      darwin
+[debug] [2022-03-10T14:22:31.613Z] Node Version:  v16.14.0
+[debug] [2022-03-10T14:22:31.622Z] Time:          Thu Mar 10 2022 21:22:31 GMT+0700 (Indochina Time)
+[debug] [2022-03-10T14:22:31.623Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-10T14:22:31.716Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] Failed to authenticate, have you run firebase login?
+[warn] ⚠  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-03-10T14:22:31.752Z] [hub] writing locator at /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/hub-bott-4c4cc.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[warn] ⚠  functions: You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services. {"metadata":{"emulator":{"name":"functions"},"message":"You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services."}}
+[debug] [2022-03-10T14:22:31.801Z] > refreshing access token with scopes: []
+[debug] [2022-03-10T14:22:31.802Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-10T14:22:31.993Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 10 Mar 2022 14:22:32 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-10T14:22:31.996Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig [none]
+[debug] [2022-03-10T14:22:32.197Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig 401
+[debug] [2022-03-10T14:22:32.198Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig"}}]}}
+[debug] [2022-03-10T14:22:32.199Z] Failed to get Admin SDK config for bott-4c4cc, falling back to cache Failed to get Admin SDK for Firebase project bott-4c4cc. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project bott-4c4cc. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
+[warn] ⚠  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2022-03-10T14:22:32.212Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-10T14:22:32.212Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-10T14:22:32.213Z] Starting Emulator UI with command {"binary":"node","args":["/Users/phoatipong/.cache/firebase/emulators/ui-v1.6.5/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/phoatipong/.cache/firebase/emulators/ui-v1.6.5/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-10T14:22:32.408Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "/Users/phoatipong/lineBot/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/phoatipong/lineBot/functions\" for Cloud Functions..."}}
+[debug] [2022-03-10T14:22:32.494Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-03-10T14:22:35.913Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-10T14:22:35.913Z] Building nodejs source
+[debug] [2022-03-10T14:22:35.913Z] Analyzing nodejs backend spec
+[info] ✔  functions[us-central1-LineBotReply]: http function initialized (http://localhost:5001/bott-4c4cc/us-central1/LineBotReply). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/bott-4c4cc/us-central1/LineBotReply)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
