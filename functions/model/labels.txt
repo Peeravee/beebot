@@ -1,0 +1,6 @@
+bad
+enemy
+good
+mite
+pollen
+queen
