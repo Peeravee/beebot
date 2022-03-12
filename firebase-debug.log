@@ -1,0 +1,769 @@
+[debug] [2022-03-12T06:28:45.664Z] ----------------------------------------------------------------------
+[debug] [2022-03-12T06:28:45.667Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2022-03-12T06:28:45.667Z] CLI Version:   10.2.2
+[debug] [2022-03-12T06:28:45.667Z] Platform:      darwin
+[debug] [2022-03-12T06:28:45.668Z] Node Version:  v16.14.0
+[debug] [2022-03-12T06:28:45.668Z] Time:          Sat Mar 12 2022 13:28:45 GMT+0700 (Indochina Time)
+[debug] [2022-03-12T06:28:45.669Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-12T06:28:45.744Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-12T06:28:45.745Z] > authorizing via signed-in user (phoatipong@gmail.com)
+[info] i  emulators: Starting emulators: auth, functions, database {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, database"}}
+[debug] [2022-03-12T06:28:45.777Z] [hub] writing locator at /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/hub-bott-4c4cc.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: firestore, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mfirestore, hosting, pubsub, storage\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-03-12T06:28:45.808Z] defaultcredentials: writing to file /Users/phoatipong/.config/firebase/phoatipong_gmail_com_application_default_credentials.json
+[debug] [2022-03-12T06:28:45.821Z] Setting GAC to /Users/phoatipong/.config/firebase/phoatipong_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/phoatipong/.config/firebase/phoatipong_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-12T06:28:45.825Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig [none]
+[debug] [2022-03-12T06:28:46.259Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig 200
+[debug] [2022-03-12T06:28:46.259Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc/adminSdkConfig {"projectId":"bott-4c4cc","databaseURL":"https://bott-4c4cc-default-rtdb.firebaseio.com","storageBucket":"bott-4c4cc.appspot.com"}
+[debug] [2022-03-12T06:28:46.284Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc [none]
+[debug] [2022-03-12T06:28:46.656Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc 200
+[debug] [2022-03-12T06:28:46.657Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bott-4c4cc {"projectId":"bott-4c4cc","projectNumber":"750899189209","displayName":"bott","name":"projects/bott-4c4cc","resources":{"hostingSite":"bott-4c4cc","realtimeDatabaseInstance":"bott-4c4cc-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-03-12T06:28:46.657Z] database rules config:  [{"instance":"bott-4c4cc-default-rtdb","rules":"/Users/phoatipong/lineBot/database.rules.json"}]
+[debug] [2022-03-12T06:28:46.662Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-03-12T06:28:46.662Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-12T06:28:46.662Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2022-03-12T06:28:46.662Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/phoatipong/.cache/firebase/emulators/firebase-database-emulator-v4.7.3.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/phoatipong/.cache/firebase/emulators/firebase-database-emulator-v4.7.3.jar\",\"--host\",\"localhost\",\"--port\",9000,\"--functions_emulator_host\",\"localhost\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2022-03-12T06:28:49.090Z] 13:28:49.088 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"13:28:49.088 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2022-03-12T06:28:49.373Z] 13:28:49.372 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"13:28:49.372 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\n"}}
+[debug] [2022-03-12T06:28:58.794Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-12T06:28:58.795Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-12T06:28:58.795Z] Starting Emulator UI with command {"binary":"node","args":["/Users/phoatipong/.cache/firebase/emulators/ui-v1.6.5/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/phoatipong/.cache/firebase/emulators/ui-v1.6.5/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-12T06:28:58.975Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "/Users/phoatipong/lineBot/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/phoatipong/lineBot/functions\" for Cloud Functions..."}}
+[debug] [2022-03-12T06:28:59.067Z] Validating nodejs source
+[debug] [2022-03-12T06:29:01.558Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:29:01.560Z] Building nodejs source
+[debug] [2022-03-12T06:29:01.561Z] Analyzing nodejs backend spec
+[info] ✔  functions[us-central1-LineBotReply]: http function initialized (http://localhost:5001/bott-4c4cc/us-central1/LineBotReply). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/bott-4c4cc/us-central1/LineBotReply)."}}
+[debug] [2022-03-12T06:29:04.740Z] >>> HTTP REQUEST PUT http://localhost:9000/.settings/rules.json?ns=bott-4c4cc-default-rtdb  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null && auth.token.isAdmin == true"
+  }
+}
+
+[debug] [2022-03-12T06:29:05.897Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"bott-4c4cc-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"4912910f-8847-44c6-af3e-9d9ae7bfe435"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ localhost:5001 │ http://localhost:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database  │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-03-12T06:29:23.076Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:29:23.076Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:29:23.077Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:29:23.090Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:29:23.091Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:29:23.091Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:29:23.091Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2861.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2861.sock"}}
+[debug] [2022-03-12T06:29:23.092Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: BUSY"}}
+[debug] [2022-03-12T06:29:26.722Z] [runtime-status] [2861] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:29:26.727Z] [runtime-status] [2861] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:29:26.732Z] [runtime-status] [2861] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.735Z] [runtime-status] [2861] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.736Z] [runtime-status] [2861] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:29:26.737Z] [runtime-status] [2861] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.861Z] [runtime-status] [2861] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:29:26.861Z] [runtime-status] [2861] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:29:26.862Z] [runtime-status] [2861] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.865Z] [runtime-status] [2861] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.866Z] [runtime-status] [2861] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:29:26.866Z] [runtime-status] [2861] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:29:29.401468: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:29:29.401468: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:29:29.401468: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:29:29.893Z] [runtime-status] [2861] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:29:29.906Z] [runtime-status] [2861] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:29:29.907Z] [runtime-status] [2861] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:29:29.911Z] [runtime-status] [2861] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2861.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2861.sock"}}
+[debug] [2022-03-12T06:29:29.915Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:29:29.916Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:29:29.950Z] [runtime-status] [2861] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730700282293/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730700282293/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:29:30.830Z] [runtime-status] [2861] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2861] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:29:30.837Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: IDLE"}}
+[debug] [2022-03-12T06:29:30.838Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:2861) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:2861) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:2861) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:29:31.536Z] File /Users/phoatipong/lineBot/functions/temp/wave1647066561917.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647066561917.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:29:32.538Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:29:32.538Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: FINISHING"}}
+[debug] [2022-03-12T06:29:32.542Z] Validating nodejs source
+[debug] [2022-03-12T06:29:35.284Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:29:35.285Z] Building nodejs source
+[debug] [2022-03-12T06:29:35.285Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:29:35.292Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: exited"}}
+[debug] [2022-03-12T06:29:35.292Z] [worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-c7b43691-1606-4f81-9850-ed3c6f4d197b]: FINISHED"}}
+[debug] [2022-03-12T06:33:12.190Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:33:12.193Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:33:12.194Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:33:12.194Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:33:12.204Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:12.205Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:33:12.205Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:12.205Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2900.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2900.sock"}}
+[debug] [2022-03-12T06:33:12.205Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: BUSY"}}
+[debug] [2022-03-12T06:33:15.640Z] [runtime-status] [2900] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:33:15.642Z] [runtime-status] [2900] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:33:15.649Z] [runtime-status] [2900] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.650Z] [runtime-status] [2900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.656Z] [runtime-status] [2900] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:33:15.656Z] [runtime-status] [2900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.710Z] [runtime-status] [2900] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:33:15.711Z] [runtime-status] [2900] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:33:15.714Z] [runtime-status] [2900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.716Z] [runtime-status] [2900] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.717Z] [runtime-status] [2900] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:15.717Z] [runtime-status] [2900] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:33:16.443567: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:33:16.443567: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:33:16.443567: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:33:16.563Z] [runtime-status] [2900] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:33:16.567Z] [runtime-status] [2900] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:33:16.568Z] [runtime-status] [2900] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:33:16.576Z] [runtime-status] [2900] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2900.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2900.sock"}}
+[debug] [2022-03-12T06:33:16.579Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:33:16.579Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:33:16.595Z] [runtime-status] [2900] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730715311008/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730715311008/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:33:17.535Z] [runtime-status] [2900] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2900] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:33:17.538Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: IDLE"}}
+[debug] [2022-03-12T06:33:17.538Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:2900) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:2900) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:2900) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:33:17.914Z] File /Users/phoatipong/lineBot/functions/temp/wave1647066791113.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647066791113.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:33:18.916Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:18.917Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: FINISHING"}}
+[debug] [2022-03-12T06:33:18.918Z] Validating nodejs source
+[debug] [2022-03-12T06:33:22.078Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:33:22.078Z] Building nodejs source
+[debug] [2022-03-12T06:33:22.078Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:33:22.089Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: exited"}}
+[debug] [2022-03-12T06:33:22.090Z] [worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-12a5216f-16be-4955-8926-4cef8dee6006]: FINISHED"}}
+[debug] [2022-03-12T06:33:23.942Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:33:23.943Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:33:23.943Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:33:23.943Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:33:23.951Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:23.952Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:33:23.952Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:23.952Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2910.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2910.sock"}}
+[debug] [2022-03-12T06:33:23.952Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: BUSY"}}
+[debug] [2022-03-12T06:33:25.528Z] [runtime-status] [2910] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:33:25.534Z] [runtime-status] [2910] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:33:25.536Z] [runtime-status] [2910] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.537Z] [runtime-status] [2910] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.538Z] [runtime-status] [2910] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:33:25.539Z] [runtime-status] [2910] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.574Z] [runtime-status] [2910] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:33:25.574Z] [runtime-status] [2910] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:33:25.575Z] [runtime-status] [2910] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.576Z] [runtime-status] [2910] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.577Z] [runtime-status] [2910] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:33:25.577Z] [runtime-status] [2910] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:33:26.217380: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:33:26.217380: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:33:26.217380: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:33:26.330Z] [runtime-status] [2910] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:33:26.334Z] [runtime-status] [2910] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:33:26.335Z] [runtime-status] [2910] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:33:26.343Z] [runtime-status] [2910] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2910.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2910.sock"}}
+[debug] [2022-03-12T06:33:26.345Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:33:26.345Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:33:26.361Z] [runtime-status] [2910] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730716075269/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730716075269/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:33:27.191Z] [runtime-status] [2910] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2910] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:33:27.193Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: IDLE"}}
+[debug] [2022-03-12T06:33:27.194Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:2910) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:2910) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:2910) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:33:27.565Z] File /Users/phoatipong/lineBot/functions/temp/wave1647066802868.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647066802868.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:33:28.567Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:33:28.568Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: FINISHING"}}
+[debug] [2022-03-12T06:33:28.571Z] Validating nodejs source
+[debug] [2022-03-12T06:33:30.165Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:33:30.166Z] Building nodejs source
+[debug] [2022-03-12T06:33:30.167Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:33:30.176Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: exited"}}
+[debug] [2022-03-12T06:33:30.176Z] [worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-4b8fb076-498d-4ca0-a75e-19e67923c886]: FINISHED"}}
+[debug] [2022-03-12T06:34:23.293Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:34:23.294Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:34:23.294Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:34:23.295Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:34:23.304Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:34:23.305Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:34:23.305Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:34:23.305Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2919.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2919.sock"}}
+[debug] [2022-03-12T06:34:23.305Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: BUSY"}}
+[debug] [2022-03-12T06:34:24.403Z] [runtime-status] [2919] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:34:24.404Z] [runtime-status] [2919] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:34:24.407Z] [runtime-status] [2919] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.408Z] [runtime-status] [2919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.409Z] [runtime-status] [2919] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:34:24.409Z] [runtime-status] [2919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.447Z] [runtime-status] [2919] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:34:24.447Z] [runtime-status] [2919] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:34:24.448Z] [runtime-status] [2919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.450Z] [runtime-status] [2919] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.451Z] [runtime-status] [2919] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:34:24.451Z] [runtime-status] [2919] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:34:25.111807: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:34:25.111807: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:34:25.111807: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:34:25.263Z] [runtime-status] [2919] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:34:25.270Z] [runtime-status] [2919] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:34:25.271Z] [runtime-status] [2919] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:34:25.278Z] [runtime-status] [2919] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2919.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2919.sock"}}
+[debug] [2022-03-12T06:34:25.281Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:34:25.281Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:34:25.302Z] [runtime-status] [2919] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730719973962/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730719973962/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:34:26.134Z] [runtime-status] [2919] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2919] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:34:26.140Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: IDLE"}}
+[debug] [2022-03-12T06:34:26.141Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:2919) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:2919) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:2919) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:34:26.598Z] File /Users/phoatipong/lineBot/functions/temp/wave1647066862565.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647066862565.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:34:27.601Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:34:27.601Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: FINISHING"}}
+[debug] [2022-03-12T06:34:27.607Z] Validating nodejs source
+[debug] [2022-03-12T06:34:30.138Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:34:30.139Z] Building nodejs source
+[debug] [2022-03-12T06:34:30.139Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:34:30.148Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: exited"}}
+[debug] [2022-03-12T06:34:30.148Z] [worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-e9e4fce0-5e06-4040-a407-fe0441ac8f9f]: FINISHED"}}
+[debug] [2022-03-12T06:37:00.166Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:37:00.166Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:37:00.166Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:37:00.166Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:37:00.174Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:37:00.175Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:37:00.175Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:37:00.175Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2977.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2977.sock"}}
+[debug] [2022-03-12T06:37:00.175Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: BUSY"}}
+[debug] [2022-03-12T06:37:01.138Z] [runtime-status] [2977] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:37:01.140Z] [runtime-status] [2977] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:37:01.143Z] [runtime-status] [2977] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.144Z] [runtime-status] [2977] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.145Z] [runtime-status] [2977] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:37:01.146Z] [runtime-status] [2977] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.184Z] [runtime-status] [2977] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:37:01.185Z] [runtime-status] [2977] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:37:01.186Z] [runtime-status] [2977] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.187Z] [runtime-status] [2977] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.188Z] [runtime-status] [2977] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:37:01.189Z] [runtime-status] [2977] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:37:01.831058: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:37:01.831058: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:37:01.831058: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:37:01.954Z] [runtime-status] [2977] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:37:01.959Z] [runtime-status] [2977] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:37:01.960Z] [runtime-status] [2977] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:37:01.966Z] [runtime-status] [2977] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2977.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_2977.sock"}}
+[debug] [2022-03-12T06:37:01.970Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:37:01.970Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:37:01.986Z] [runtime-status] [2977] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730730183340/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730730183340/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:37:02.932Z] [runtime-status] [2977] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [2977] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:37:02.934Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: IDLE"}}
+[debug] [2022-03-12T06:37:02.935Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:2977) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:2977) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:2977) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:37:03.349Z] File /Users/phoatipong/lineBot/functions/temp/wave1647067019386.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647067019386.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:37:04.350Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:37:04.351Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: FINISHING"}}
+[debug] [2022-03-12T06:37:04.352Z] Validating nodejs source
+[debug] [2022-03-12T06:37:06.496Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:37:06.498Z] Building nodejs source
+[debug] [2022-03-12T06:37:06.498Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:37:06.509Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: exited"}}
+[debug] [2022-03-12T06:37:06.509Z] [worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-82698d1e-b213-4aa5-b8f6-73dae821669b]: FINISHED"}}
+[debug] [2022-03-12T06:37:46.068Z] File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers"}}
+[debug] [2022-03-12T06:37:47.070Z] Validating nodejs source
+[debug] [2022-03-12T06:37:48.484Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:37:48.485Z] Building nodejs source
+[debug] [2022-03-12T06:37:48.485Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:37:52.428Z] File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers"}}
+[debug] [2022-03-12T06:37:52.528Z] File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers"}}
+[debug] [2022-03-12T06:37:53.531Z] Validating nodejs source
+[debug] [2022-03-12T06:37:55.652Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:37:55.653Z] Building nodejs source
+[debug] [2022-03-12T06:37:55.654Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:37:55.668Z] File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/index.js changed, reloading triggers"}}
+[debug] [2022-03-12T06:37:56.672Z] Validating nodejs source
+[debug] [2022-03-12T06:37:58.097Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:37:58.099Z] Building nodejs source
+[debug] [2022-03-12T06:37:58.099Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:38:06.694Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:38:06.695Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:38:06.695Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:38:06.696Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:38:06.704Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:06.705Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:38:06.705Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:06.705Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3012.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3012.sock"}}
+[debug] [2022-03-12T06:38:06.705Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: BUSY"}}
+[debug] [2022-03-12T06:38:07.664Z] [runtime-status] [3012] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:38:07.670Z] [runtime-status] [3012] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:38:07.673Z] [runtime-status] [3012] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.674Z] [runtime-status] [3012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.674Z] [runtime-status] [3012] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:38:07.676Z] [runtime-status] [3012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.718Z] [runtime-status] [3012] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:38:07.719Z] [runtime-status] [3012] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:38:07.721Z] [runtime-status] [3012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.721Z] [runtime-status] [3012] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.722Z] [runtime-status] [3012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:07.722Z] [runtime-status] [3012] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:38:08.529857: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:38:08.529857: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:38:08.529857: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:38:08.667Z] [runtime-status] [3012] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:38:08.672Z] [runtime-status] [3012] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:38:08.673Z] [runtime-status] [3012] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:38:08.678Z] [runtime-status] [3012] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3012.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3012.sock"}}
+[debug] [2022-03-12T06:38:08.683Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:38:08.683Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:38:08.702Z] [runtime-status] [3012] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730734504022/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730734504022/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:38:09.435Z] [runtime-status] [3012] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3012] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:38:09.438Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: IDLE"}}
+[debug] [2022-03-12T06:38:09.438Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:3012) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:3012) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:3012) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:38:09.808Z] File /Users/phoatipong/lineBot/functions/temp/wave1647067085946.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647067085946.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:38:10.809Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:10.809Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: FINISHING"}}
+[debug] [2022-03-12T06:38:10.810Z] Validating nodejs source
+[debug] [2022-03-12T06:38:12.794Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:38:12.795Z] Building nodejs source
+[debug] [2022-03-12T06:38:12.795Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:38:12.808Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: exited"}}
+[debug] [2022-03-12T06:38:12.808Z] [worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-190b33c5-35ca-4c78-9e8a-aa00e3feb216]: FINISHED"}}
+[debug] [2022-03-12T06:38:36.863Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-12T06:38:36.864Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-12T06:38:36.864Z] Accepted request POST /bott-4c4cc/us-central1/LineBotReply --> us-central1-LineBotReply
+[debug] [2022-03-12T06:38:36.864Z] [worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-LineBotReply: 1 --> 0"}}
+[debug] [2022-03-12T06:38:36.873Z] [worker-pool] addWorker(us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:36.874Z] [worker-pool] Adding worker with key us-central1-LineBotReply, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-LineBotReply, total=1"}}
+[debug] [2022-03-12T06:38:36.874Z] [worker-pool] submitWork(triggerId=us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:36.874Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3040.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: Assigning socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3040.sock"}}
+[debug] [2022-03-12T06:38:36.874Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: BUSY"}}
+[debug] [2022-03-12T06:38:37.718Z] [runtime-status] [3040] Functions runtime initialized. {"cwd":"/Users/phoatipong/lineBot/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Functions runtime initialized. {\"cwd\":\"/Users/phoatipong/lineBot/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-12T06:38:37.719Z] [runtime-status] [3040] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Disabled runtime features: undefined"}}
+[debug] [2022-03-12T06:38:37.722Z] [runtime-status] [3040] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.723Z] [runtime-status] [3040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.724Z] [runtime-status] [3040] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-12T06:38:37.725Z] [runtime-status] [3040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.762Z] [runtime-status] [3040] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-12T06:38:37.763Z] [runtime-status] [3040] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-03-12T06:38:37.764Z] [runtime-status] [3040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.765Z] [runtime-status] [3040] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.766Z] [runtime-status] [3040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-03-12T06:38:37.766Z] [runtime-status] [3040] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/phoatipong/lineBot/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  2022-03-12 06:38:38.399384: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA {"user":"2022-03-12 06:38:38.399384: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m 2022-03-12 06:38:38.399384: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA"}}
+[info] >  To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags. {"user":"To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags."}}
+[debug] [2022-03-12T06:38:38.520Z] [runtime-status] [3040] initializeApp(DEFAULT) {"storageBucket":"bott-4c4cc.appspot.com","databaseURL":"http://localhost:9000/?ns=bott-4c4cc-default-rtdb","projectId":"bott-4c4cc"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] initializeApp(DEFAULT) {\"storageBucket\":\"bott-4c4cc.appspot.com\",\"databaseURL\":\"http://localhost:9000/?ns=bott-4c4cc-default-rtdb\",\"projectId\":\"bott-4c4cc\"}"}}
+[debug] [2022-03-12T06:38:38.525Z] [runtime-status] [3040] Beginning invocation function LineBotReply! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Beginning invocation function LineBotReply!"}}
+[info] i  functions: Beginning execution of "LineBotReply" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Beginning execution of \"LineBotReply\""}}
+[debug] [2022-03-12T06:38:38.526Z] [runtime-status] [3040] Running LineBotReply in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Running LineBotReply in signature http"}}
+[debug] [2022-03-12T06:38:38.534Z] [runtime-status] [3040] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3040.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Attempting to listen to socketPath: /var/folders/qm/vzcgfpm113qcnwzrw2936cp00000gn/T/fire_emu_3040.sock"}}
+[debug] [2022-03-12T06:38:38.536Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-12T06:38:38.536Z] [functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bott-4c4cc/us-central1/LineBotReply, mapping to path=/"}}
+[debug] [2022-03-12T06:38:38.552Z] [runtime-status] [3040] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Ephemeral server handling POST request"}}
+[warn] ⚠  External network resource requested!
+   - URL: "https://api-data.line.me/v2/bot/message/15730736463372/content"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"External network resource requested!\n   - URL: \"https://api-data.line.me/v2/bot/message/15730736463372/content\"\n - Be careful, this may be a production service."}}
+[debug] [2022-03-12T06:38:39.380Z] [runtime-status] [3040] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"[runtime-status] [3040] Ephemeral server survived."}}
+[info] i  functions: Finished "LineBotReply" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"Finished \"LineBotReply\" in ~1s"}}
+[debug] [2022-03-12T06:38:39.384Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: IDLE"}}
+[debug] [2022-03-12T06:38:39.385Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  (node:3040) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead. {"user":"(node:3040) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:3040) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2022-03-12T06:38:39.774Z] File /Users/phoatipong/lineBot/functions/temp/wave1647067116059.png changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/phoatipong/lineBot/functions/temp/wave1647067116059.png changed, reloading triggers"}}
+[info] >  model is loaded!!! {"user":"model is loaded!!!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m model is loaded!!!"}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { probability: 0.6922037601470947, className: 'Mite' }, {"user":"  { probability: 0.6922037601470947, className: 'Mite' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.6922037601470947, className: 'Mite' },"}}
+[info] >    { probability: 0.2785103917121887, className: 'Good' }, {"user":"  { probability: 0.2785103917121887, className: 'Good' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.2785103917121887, className: 'Good' },"}}
+[info] >    { probability: 0.014018148183822632, className: 'Pollen' }, {"user":"  { probability: 0.014018148183822632, className: 'Pollen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.014018148183822632, className: 'Pollen' },"}}
+[info] >    { probability: 0.013066650368273258, className: 'Queen' }, {"user":"  { probability: 0.013066650368273258, className: 'Queen' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.013066650368273258, className: 'Queen' },"}}
+[info] >    { probability: 0.0012830572668462992, className: 'Enemy' }, {"user":"  { probability: 0.0012830572668462992, className: 'Enemy' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0012830572668462992, className: 'Enemy' },"}}
+[info] >    { probability: 0.0009180088527500629, className: 'Bad' } {"user":"  { probability: 0.0009180088527500629, className: 'Bad' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m   { probability: 0.0009180088527500629, className: 'Bad' }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-LineBotReply"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[debug] [2022-03-12T06:38:40.775Z] [worker-pool] Shutting down IDLE worker (us-central1-LineBotReply) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-LineBotReply)"}}
+[debug] [2022-03-12T06:38:40.775Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: FINISHING"}}
+[debug] [2022-03-12T06:38:40.777Z] Validating nodejs source
+[debug] [2022-03-12T06:38:43.806Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-12T06:38:43.807Z] Building nodejs source
+[debug] [2022-03-12T06:38:43.807Z] Analyzing nodejs backend spec
+[debug] [2022-03-12T06:38:43.828Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: exited"}}
+[debug] [2022-03-12T06:38:43.829Z] [worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-LineBotReply-1d31f1a0-65c0-452f-b2f4-e7607c88dccc]: FINISHED"}}

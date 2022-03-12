@@ -13,8 +13,7 @@ const tf = require("@tensorflow/tfjs");
 const tfnode = require("@tensorflow/tfjs-node");
 const imageGet = require("get-image-data");
 
-admin.initializeApp();
-
+admin.initializeApp()
 const runtimeOpts = {
   timeoutSeconds: 180,
   memory: "1GB",
@@ -40,8 +39,9 @@ const LINE_HEADER_AUDIO = {
 exports.LineBotReply = functions
   .runWith(runtimeOpts)
   .https.onRequest(async (req, res) => {
-    const type = req.body.events[0].message.type;
-    const messageId = req.body.events[0].message.id;
+    let type = req.body.events[0].message.type;
+    let messageId = req.body.events[0].message.id;
+    let sendfrom = req.body.destination;
     if (type === "audio") {
       const contentUri = `https://api-data.line.me/v2/bot/message/${messageId}/content`;
       const contentBuffer = await request(contentUri, {
@@ -54,23 +54,27 @@ exports.LineBotReply = functions
       const filename = `${timestamp}.m4a`;
       let tempLocalFile = path.join("./temp", filename);
       await fs.writeFileSync(tempLocalFile, contentBuffer);
-      const filenamewav = `${timestamp}.wav`;
+      let filenamewav = `${timestamp}.wav`;
       let tempLocalFileWav = path.join("./temp", filenamewav);
       const resp = await fs.readFileSync(tempLocalFile);
       audioContext.decodeAudioData(resp, async (buffer) => {
         const wav = toWav(buffer);
         await fs.writeFileSync(tempLocalFileWav, new Buffer(wav));
         await waveDraw(`./temp/${timestamp}.wav`, `${timestamp}`);
+        const pred = await predict(`./temp/wave${timestamp}.png`);
+        await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
+        await increaseTransaction(pred[0].className);
+        await logPush(pred[0].className,pred[0].probability,sendfrom);
+        return res.status(200).end();
 
-        await predict(`./temp/wave${timestamp}.png`);
+
+
       });
 
-      const db = admin.database();
-      await db.ref("/prediction/All").transaction((current_val) => {
-        return (current_val || 0) + 1;
-      });
-      await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
-      return res.status(200).end();
+      // const db = admin.database();
+      // await db.ref("/prediction/All").transaction((current_val) => {
+      //   return (current_val || 0) + 1;
+      // });
     }
 
     return res.status(400).end();
@@ -103,7 +107,7 @@ const clearTemp = (wav, m4a, png) => {
 };
 
 async function predict(img) {
-  var label = ["bad", "enemy", "good", "mite", "pollen", "queen"];
+  var label = ["Bad", "Enemy", "Good", "Mite", "Pollen", "Queen"];
   let handler = tfnode.io.fileSystem("./model/model.json");
 
   let model = await tf.loadGraphModel(handler);
@@ -117,14 +121,20 @@ async function predict(img) {
     .toFloat();
   const pred = await model.predict(tensor).data();
 
-  let predict = Array.from(pred).map((p,i) => {
-    return {
-      probability: p,
-      className: label[i]
-    }
-  });
-
+  let predict = Array.from(pred)
+    .map(function (p, i) {
+      // this is Array.map
+      return {
+        probability: p,
+        className: label[i], // we are selecting the value from the obj
+      };
+    })
+    .sort(function (a, b) {
+      return b.probability - a.probability;
+    })
+    .slice(0, 6);
   console.log(predict);
+  return predict;
 }
 
 // const reply = (bodyResponse) => {
@@ -143,3 +153,25 @@ async function predict(img) {
 //     }),
 //   });
 // };
+
+const increaseTransaction = async (classname) => {
+  const db = admin.database();
+  await db.ref("/prediction/All").transaction((current_val) => {
+    return (current_val || 0) + 1;
+  });
+  await db.ref(`/prediction/${classname}`).transaction((current_val) => {
+    return (current_val || 0) + 1;
+  });
+};
+
+const logPush = async (className, probability, sendfrom) => {
+  const db = admin.database();
+  await db.ref("/log").push({
+    class: className,
+    date: new Date().toLocaleString("en-GB", {
+      timeZone: "Asia/Jakarta",
+    }),
+    probability: probability.toFixed(2),
+    sendfrom: sendfrom,
+  });
+};
