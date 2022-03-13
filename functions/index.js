@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
 const functions = require("firebase-functions");
@@ -11,17 +12,16 @@ const audioContext = new AudioContext();
 const fs = require("fs");
 const tf = require("@tensorflow/tfjs");
 const tfnode = require("@tensorflow/tfjs-node");
+const { v4: uuidv4 } = require("uuid");
+const os = require("os")
 
 admin.initializeApp();
-// const runtimeOpts = {
-//   timeoutSeconds: 180,
-//   memory: "1GB",
-// };
+const runtimeOpts = {
+  timeoutSeconds: 180,
+  memory: "1GB",
+};
 
-const token = `Ow/nDECGrRMCiyAWAeci3Nh16bC/ZibMNI3cuxkQGJWfzZ8o7x
-Dao7AnRX7dml0912eXbqsU/blXQTGPOl2qth
-jRMlMcb96CUrocoL5trIWk99DCDK6EPyDgaKbG86oEuWFV8Y8q
-iYdM+J7rzw6R2AdB04t89/1O/w1cDnyilFU=`;
+const token = `x69zazcKUNJzXQMbehQbbbtRmBTBavog0/HcnvFXRd4lsb8wyQKYoQphSFjbrjciArZKDppUAn0wsOEOYqDyGpVg3amEaQukl4f8dd2Sfk33BqlfxeF3u/mHrgzYPnLjjZYhDt9tRoHtAQ9QbHU4sAdB04t89/1O/w1cDnyilFU=`;
 // const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message/reply";
 // const LINE_HEADER = {
 //   "Content-Type": "application/json",
@@ -33,52 +33,57 @@ const LINE_HEADER_AUDIO = {
   Authorization: `Bearer ${token}`,
 };
 
-const getContent = async (messageId) => {
-  const LINE_CONTENT_API = LINE_CONTENT_API_PRE + messageId + LINE_CONTENT_API_SUF;
-  const contentBuffer = await request(LINE_CONTENT_API, {
-    method: "GET",
-    headers: LINE_HEADER_AUDIO,
-    encoding: null,
+
+exports.LineBotReply = functions
+  .runWith(runtimeOpts)
+  .https.onRequest(async (req, res) => {
+    var event = req.body.events[0];
+    var messageId = req.body.events[0].message.id;
+    var sendfrom = req.body.destination;
+    if (req.body.events[0].message.type === "audio") {
+      console.log("Is Audio");
+      const contentBuffer = await getContent(messageId);
+      const timestamp = req.body.events[0].timestamp;
+      const filename = `${timestamp}.m4a`;
+      const tempLocalFile = path.join(os.tmpdir(), filename);
+      await fs.writeFileSync(tempLocalFile, contentBuffer);
+      console.log("m4a writed!!");
+      const filenamewav = `${timestamp}.wav`;
+      const tempLocalFileWav = path.join(os.tmpdir(), filenamewav);
+      const resp = await fs.readFileSync(tempLocalFile);
+      console.log("read m4a!!!!");
+      await audioContext.decodeAudioData(resp, async (buffer) => {
+        const wav = toWav(buffer);
+        await fs.writeFileSync(tempLocalFileWav, new Buffer.from(wav));
+        await console.log("write wav");
+        await waveDraw(tempLocalFileWav, timestamp);
+        await console.log("draw wav");
+        const pathImg = path.join(os.tmpdir(),`wave${timestamp}.png`)
+        const urlImg = await uploadImage(
+          event,
+          pathImg,
+          timestamp + ".png"
+        );
+        await console.log("upload wav");
+        await console.log(urlImg);
+        const pred = await predict(pathImg);
+        await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
+        await increaseTransaction(pred[0].className);
+        await logPush(pred[0].className, pred[0].probability, sendfrom);
+        return await res.status(200).end();
+      });
+
+      const db = admin.database();
+      await db.ref("/prediction/All").transaction((current_val) => {
+        return (current_val || 0) + 1;
+      });
+    }
   });
 
-  return await contentBuffer;
-};
-exports.LineBotReply = functions.region("asia-southeast1").https
-    .onRequest(async (req, res) => {
-      const messageId = req.body.events[0].message.id;
-      const sendfrom = req.body.destination;
-      if (req.body.events[0].message.type === "audio") {
-        const contentBuffer = await getContent(messageId);
-        console.log(contentBuffer);
-
-        const timestamp = req.body.events[0].timestamp;
-        const filename = `${timestamp}.m4a`;
-        const tempLocalFile = path.join("./temp", filename);
-        await fs.writeFileSync(tempLocalFile, contentBuffer);
-        const filenamewav = `${timestamp}.wav`;
-        const tempLocalFileWav = path.join("./temp", filenamewav);
-        const resp = await fs.readFileSync(tempLocalFile);
-        await audioContext.decodeAudioData(resp, async (buffer) => {
-          const wav = toWav(buffer);
-          await fs.writeFileSync(tempLocalFileWav, new Buffer(wav));
-          await waveDraw(`./temp/${timestamp}.wav`, `${timestamp}`);
-          const pred = await predict(`./temp/wave${timestamp}.png`);
-          await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
-          await increaseTransaction(pred[0].className);
-          await logPush(pred[0].className, pred[0].probability, sendfrom);
-          return res.status(200).end();
-        });
-
-        const db = admin.database();
-        await db.ref("/prediction/All").transaction((current_val) => {
-          return (current_val || 0) + 1;
-        });
-      }
-    });
-
-const waveDraw = (path, filename) => {
+async function waveDraw(fpath, filename) {
   // eslint-disable-next-line new-cap
-  const wd = new wavedraw(path);
+  const wd = new wavedraw(fpath);
+  const filepath = path.join(os.tmpdir(),`wave${filename}.png`);
   const options = {
     width: 300,
     height: 300,
@@ -92,45 +97,59 @@ const waveDraw = (path, filename) => {
       rms: "#659df7",
       background: "#ffffff",
     },
-    filename: `./temp/wave${filename}.png`,
+    filename: filepath
   };
-  return wd.drawWave(options);
-};
+  return await wd.drawWave(options);
+}
 
-const clearTemp = (wav, m4a, png) => {
-  fs.unlinkSync(`./temp/${wav}`);
-  fs.unlinkSync(`./temp/${m4a}`);
-  fs.unlinkSync(`./temp/${png}`);
-};
+async function clearTemp(wav, m4a, png) {
+  
+  await fs.unlinkSync(path.join(os.tmpdir(),wav));
+  await fs.unlinkSync(path.join(os.tmpdir(),m4a));
+  await fs.unlinkSync(path.join(os.tmpdir(),png));
+  return console.log("Delete Temp Done");
+}
 
-const predict = async (img) => {
+async function predict(img) {
   const label = ["Bad", "Enemy", "Good", "Mite", "Pollen", "Queen"];
   const handler = tfnode.io.fileSystem("./model/model.json");
   const model = await tf.loadGraphModel(handler);
   await console.log("model is loaded!!!");
   const imgData = fs.readFileSync(img, Uint8Array);
   const tensor = await tfnode.node
-      .decodePng(imgData, 3)
-      .cast("float32")
-      .resizeNearestNeighbor([300, 300])
-      .expandDims()
-      .toFloat();
+    .decodePng(imgData, 3)
+    .cast("float32")
+    .resizeNearestNeighbor([300, 300])
+    .expandDims()
+    .toFloat();
   const pred = await model.predict(tensor).data();
 
   const predict = Array.from(pred)
-      .map(function(p, i) {
-        // this is Array.map
-        return {
-          probability: p,
-          className: label[i], // we are selecting the value from the obj
-        };
-      })
-      .sort(function(a, b) {
-        return b.probability - a.probability;
-      })
-      .slice(0, 6);
+    .map(function (p, i) {
+      // this is Array.map
+      return {
+        probability: p,
+        className: label[i], // we are selecting the value from the obj
+      };
+    })
+    .sort(function (a, b) {
+      return b.probability - a.probability;
+    })
+    .slice(0, 6);
   console.log(predict);
   return predict;
+}
+
+async function getContent (messageId) {
+  const LINE_CONTENT_API =
+    LINE_CONTENT_API_PRE + messageId + LINE_CONTENT_API_SUF;
+  const contentBuffer = await request(LINE_CONTENT_API, {
+    method: "GET",
+    headers: LINE_HEADER_AUDIO,
+    encoding: null,
+  });
+
+  return contentBuffer;
 };
 
 // const reply = (bodyResponse) => {
@@ -150,7 +169,7 @@ const predict = async (img) => {
 //   });
 // };
 
-const increaseTransaction = async (classname) => {
+async function increaseTransaction(classname) {
   const db = admin.database();
   await db.ref("/prediction/All").transaction((current_val) => {
     return (current_val || 0) + 1;
@@ -158,9 +177,9 @@ const increaseTransaction = async (classname) => {
   await db.ref(`/prediction/${classname}`).transaction((current_val) => {
     return (current_val || 0) + 1;
   });
-};
+}
 
-const logPush = async (className, probability, sendfrom) => {
+async function logPush(className, probability, sendfrom) {
   const db = admin.database();
   await db.ref("/log").push({
     class: className,
@@ -170,4 +189,24 @@ const logPush = async (className, probability, sendfrom) => {
     probability: probability.toFixed(2),
     sendfrom: sendfrom,
   });
-};
+}
+
+async function uploadImage(event, imgLocalFile, filename) {
+  const uuid = uuidv4();
+  const bucket = admin.storage().bucket();
+  const file = await bucket.upload(imgLocalFile, {
+    // กำหนด path ในการเก็บไฟล์แยกเป็นแต่ละ userId
+    destination: `photos/${event.source.userId}/${filename}`,
+    metadata: {
+      cacheControl: "no-cache",
+      metadata: {
+        firebaseStorageDownloadTokens: uuid,
+      },
+    },
+  });
+  const prefix = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o`;
+  const suffix = `alt=media&token=${uuid}`;
+
+  // ส่งคืนค่า public url ของรูปออกไป
+  return `${prefix}/${encodeURIComponent(file[0].name)}?${suffix}`;
+}
