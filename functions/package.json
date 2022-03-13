@@ -10,12 +10,23 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "16"
+    "node": "14"
   },
   "main": "index.js",
   "dependencies": {
+    "@tensorflow/tfjs": "^3.14.0",
+    "@tensorflow/tfjs-node": "^3.14.0",
+    "audio-type": "^1.0.2",
+    "audiobuffer": "^0.2.0",
+    "audiobuffer-to-wav": "^1.0.0",
+    "cors": "^2.8.5",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.1"
+    "firebase-functions": "^3.18.1",
+    "node-wav": "^0.0.2",
+    "request-promise": "^4.2.6",
+    "uuid": "^8.3.2",
+    "wavedraw": "^1.1.0",
+    "web-audio-api": "^0.2.2"
   },
   "devDependencies": {
     "eslint": "^7.6.0",

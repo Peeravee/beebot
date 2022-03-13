@@ -16,10 +16,16 @@
       "port": 5001
     },
     "database": {
-      "port": 9001
+      "port": 9007
     },
     "ui": {
       "enabled": true
+    },
+    "storage": {
+      "port": 9199
     }
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }
