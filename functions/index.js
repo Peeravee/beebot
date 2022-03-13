@@ -13,7 +13,7 @@ const fs = require("fs");
 const tf = require("@tensorflow/tfjs");
 const tfnode = require("@tensorflow/tfjs-node");
 const { v4: uuidv4 } = require("uuid");
-const os = require("os")
+const os = require("os");
 
 admin.initializeApp();
 const runtimeOpts = {
@@ -22,22 +22,22 @@ const runtimeOpts = {
 };
 
 const token = `x69zazcKUNJzXQMbehQbbbtRmBTBavog0/HcnvFXRd4lsb8wyQKYoQphSFjbrjciArZKDppUAn0wsOEOYqDyGpVg3amEaQukl4f8dd2Sfk33BqlfxeF3u/mHrgzYPnLjjZYhDt9tRoHtAQ9QbHU4sAdB04t89/1O/w1cDnyilFU=`;
-// const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message/reply";
-// const LINE_HEADER = {
-//   "Content-Type": "application/json",
-//   Authorization: `Bearer ${token}`,
-// };
+const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message/reply";
+const LINE_HEADER = {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${token}`,
+};
 const LINE_CONTENT_API_PRE = "https://api-data.line.me/v2/bot/message/";
 const LINE_CONTENT_API_SUF = "/content";
 const LINE_HEADER_AUDIO = {
   Authorization: `Bearer ${token}`,
 };
 
-
 exports.LineBotReply = functions
   .runWith(runtimeOpts)
   .https.onRequest(async (req, res) => {
     var event = req.body.events[0];
+    var replyToken = event.replyToken;
     var messageId = req.body.events[0].message.id;
     var sendfrom = req.body.destination;
     if (req.body.events[0].message.type === "audio") {
@@ -58,18 +58,14 @@ exports.LineBotReply = functions
         await console.log("write wav");
         await waveDraw(tempLocalFileWav, timestamp);
         await console.log("draw wav");
-        const pathImg = path.join(os.tmpdir(),`wave${timestamp}.png`)
-        const urlImg = await uploadImage(
-          event,
-          pathImg,
-          timestamp + ".png"
-        );
+        const pathImg = path.join(os.tmpdir(), `wave${timestamp}.png`);
+        const urlImg = await uploadImage(event, pathImg, timestamp + ".png");
         await console.log("upload wav");
-        await console.log(urlImg);
         const pred = await predict(pathImg);
         await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
         await increaseTransaction(pred[0].className);
         await logPush(pred[0].className, pred[0].probability, sendfrom);
+        await reply(replyToken, pred[0].className, urlImg);
         return await res.status(200).end();
       });
 
@@ -83,7 +79,7 @@ exports.LineBotReply = functions
 async function waveDraw(fpath, filename) {
   // eslint-disable-next-line new-cap
   const wd = new wavedraw(fpath);
-  const filepath = path.join(os.tmpdir(),`wave${filename}.png`);
+  const filepath = path.join(os.tmpdir(), `wave${filename}.png`);
   const options = {
     width: 300,
     height: 300,
@@ -95,18 +91,17 @@ async function waveDraw(fpath, filename) {
     colors: {
       maximums: "#0000ff",
       rms: "#659df7",
-      background: "#ffffff",
+      background: "#424242",
     },
-    filename: filepath
+    filename: filepath,
   };
   return await wd.drawWave(options);
 }
 
 async function clearTemp(wav, m4a, png) {
-  
-  await fs.unlinkSync(path.join(os.tmpdir(),wav));
-  await fs.unlinkSync(path.join(os.tmpdir(),m4a));
-  await fs.unlinkSync(path.join(os.tmpdir(),png));
+  await fs.unlinkSync(path.join(os.tmpdir(), wav));
+  await fs.unlinkSync(path.join(os.tmpdir(), m4a));
+  await fs.unlinkSync(path.join(os.tmpdir(), png));
   return console.log("Delete Temp Done");
 }
 
@@ -140,7 +135,7 @@ async function predict(img) {
   return predict;
 }
 
-async function getContent (messageId) {
+async function getContent(messageId) {
   const LINE_CONTENT_API =
     LINE_CONTENT_API_PRE + messageId + LINE_CONTENT_API_SUF;
   const contentBuffer = await request(LINE_CONTENT_API, {
@@ -150,24 +145,62 @@ async function getContent (messageId) {
   });
 
   return contentBuffer;
+}
+
+const classNameToTh = (className) => {
+  let classNameth = "";
+  switch (className) {
+    case "Bad":
+      classNameth = "มีควันไฟ";
+      return classNameth;
+      break;
+    case "Good":
+      classNameth = "ปกติ";
+      return classNameth;
+      break;
+    case "Mite":
+      classNameth = "มีตัวไร";
+      return classNameth;
+      break;
+    case "Pollen":
+      classNameth = "ขาดเกสร อาหาร";
+      return classNameth;
+      break;
+    case "Queen":
+      classNameth = "นางพญาหาย";
+      return classNameth;
+      break;
+    case "Enemy":
+      classNameth = "ศัตรู";
+      return classNameth;
+      break;
+    default:
+      return classNameth;
+  }
 };
 
-// const reply = (bodyResponse) => {
-//   return request({
-//     method: "POST",
-//     uri: LINE_MESSAGING_API,
-//     headers: LINE_HEADER,
-//     body: JSON.stringify({
-//       replyToken: bodyResponse.events[0].replyToken,
-//       messages: [
-//         {
-//           type: "text",
-//           text: JSON.stringify(bodyResponse),
-//         },
-//       ],
-//     }),
-//   });
-// };
+const reply = async (replyToken, className, urlImg) => {
+  let classNameTh = await classNameToTh(className);
+  return request({
+    method: "POST",
+    uri: LINE_MESSAGING_API,
+    headers: LINE_HEADER,
+    body: JSON.stringify({
+      replyToken: replyToken,
+      messages: [
+        {
+          type: "image",
+          originalContentUrl: `${urlImg}`,
+          previewImageUrl: `${urlImg}`,
+        },
+        {
+          type: "text",
+          text: `${classNameTh}`,
+        },
+      ],
+    }),
+  });
+};
 
 async function increaseTransaction(classname) {
   const db = admin.database();
