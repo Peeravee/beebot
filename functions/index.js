@@ -21,7 +21,8 @@ const runtimeOpts = {
   memory: "1GB",
 };
 
-const token = `x69zazcKUNJzXQMbehQbbbtRmBTBavog0/HcnvFXRd4lsb8wyQKYoQphSFjbrjciArZKDppUAn0wsOEOYqDyGpVg3amEaQukl4f8dd2Sfk33BqlfxeF3u/mHrgzYPnLjjZYhDt9tRoHtAQ9QbHU4sAdB04t89/1O/w1cDnyilFU=`;
+const token = `Ow/nDECGrRMCiyAWAeci3Nh16bC/ZibMNI3cuxkQGJWfzZ8o7xDao7AnRX7dml0912eXbqsU/blXQTGPOl2qthjRMlMcb96CUrocoL5trIWk99DCDK6EPyDgaKbG86oEuWFV8Y8qiYdM+J7rzw6R2AdB04t89/1O/w1cDnyilFU=
+`;
 const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message/reply";
 const LINE_HEADER = {
   "Content-Type": "application/json",
@@ -64,8 +65,8 @@ exports.LineBotReply = functions
         const pred = await predict(pathImg);
         await clearTemp(filenamewav, filename, `wave${timestamp}.png`);
         await increaseTransaction(pred[0].className);
-        await logPush(pred[0].className, pred[0].probability, sendfrom);
-        await reply(replyToken, pred[0].className, urlImg);
+        await logPush(pred[0].className, pred[0].probability, sendfrom, urlImg);
+        await reply(replyToken, pred[0].className, pred[0].probability, urlImg);
         return await res.status(200).end();
       });
 
@@ -163,7 +164,7 @@ const classNameToTh = (className) => {
       return classNameth;
       break;
     case "Pollen":
-      classNameth = "ขาดเกสร อาหาร";
+      classNameth = "ขาดเกสรอาหาร";
       return classNameth;
       break;
     case "Queen":
@@ -171,7 +172,7 @@ const classNameToTh = (className) => {
       return classNameth;
       break;
     case "Enemy":
-      classNameth = "ศัตรู";
+      classNameth = "มีศัตรู";
       return classNameth;
       break;
     default:
@@ -179,8 +180,9 @@ const classNameToTh = (className) => {
   }
 };
 
-const reply = async (replyToken, className, urlImg) => {
+const reply = async (replyToken, className, probability, urlImg) => {
   let classNameTh = await classNameToTh(className);
+  const prob = (probability * 100).toFixed(2);
   return request({
     method: "POST",
     uri: LINE_MESSAGING_API,
@@ -188,14 +190,70 @@ const reply = async (replyToken, className, urlImg) => {
     body: JSON.stringify({
       replyToken: replyToken,
       messages: [
+        // {
+        //   type: "image",
+        //   originalContentUrl: `${urlImg}`,
+        //   previewImageUrl: `${urlImg}`,
+        // },
+        // {
+        //   type: "text",
+        //   text: `${classNameTh}`,
+        // },
+
         {
-          type: "image",
-          originalContentUrl: `${urlImg}`,
-          previewImageUrl: `${urlImg}`,
-        },
-        {
-          type: "text",
-          text: `${classNameTh}`,
+          type: "flex",
+          altText: "ผลวินิจฉัย",
+          contents: {
+            type: "bubble",
+            hero: {
+              type: "image",
+              url: `${urlImg}`,
+              size: "full",
+              aspectRatio: "20:8",
+              aspectMode: "cover",
+            },
+            body: {
+              type: "box",
+              layout: "vertical",
+              contents: [
+                {
+                  type: "text",
+                  text: "ผลวินิจฉัย",
+                  weight: "bold",
+                  size: "xl",
+                },
+                {
+                  type: "text",
+                  text: `${classNameTh} :  ${prob} %`,
+                  size: "lg",
+                },
+              ],
+            },
+            footer: {
+              type: "box",
+              layout: "vertical",
+              spacing: "sm",
+              contents: [
+                {
+                  type: "button",
+                  style: "link",
+                  height: "sm",
+                  action: {
+                    type: "uri",
+                    uri: "https://linecorp.com",
+                    label: "คำแนะนำ",
+                  },
+                },
+                {
+                  type: "box",
+                  layout: "vertical",
+                  contents: [],
+                  margin: "sm",
+                },
+              ],
+              flex: 0,
+            },
+          },
         },
       ],
     }),
@@ -212,7 +270,7 @@ async function increaseTransaction(classname) {
   });
 }
 
-async function logPush(className, probability, sendfrom) {
+async function logPush(className, probability, sendfrom, urlImg) {
   const db = admin.database();
   await db.ref("/log").push({
     class: className,
@@ -221,6 +279,7 @@ async function logPush(className, probability, sendfrom) {
     }),
     probability: probability.toFixed(2),
     sendfrom: sendfrom,
+    img: urlImg,
   });
 }
 
